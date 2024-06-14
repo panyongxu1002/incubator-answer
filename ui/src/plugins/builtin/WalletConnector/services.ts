@@ -17,16 +17,24 @@
  * under the License.
  */
 
-package main
+import useSWR from 'swr';
 
-import (
-	answercmd "github.com/apache/incubator-answer/cmd"
-	_ "github.com/apache/incubator-answer-plugins/connector-github"
-)
+import request from '@/utils/request';
 
-// @securityDefinitions.apikey ApiKeyAuth
-// @in header
-// @name Authorization
-func main() {
-	answercmd.Main()
+export interface OauthConnectorItem {
+  icon: string;
+  name: string;
+  link: string;
 }
+
+export const useGetStartUseOauthConnector = () => {
+  const { data, error } = useSWR<OauthConnectorItem[]>(
+    '/answer/api/v1/connector/info',
+    request.instance.get,
+  );
+
+  return {
+    data,
+    error,
+  };
+};

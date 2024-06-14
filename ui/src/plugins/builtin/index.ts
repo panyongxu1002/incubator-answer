@@ -20,9 +20,11 @@
 import ThirdPartyConnector from './ThirdPartyConnector';
 import HostingConnector from './HostingConnector';
 import SerarchInfo from './SearchInfo';
+import WalletConnector from './WalletConnector';
 
 export default {
   ThirdPartyConnector,
   HostingConnector,
   SerarchInfo,
+  WalletConnector,
 };

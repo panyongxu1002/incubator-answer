@@ -57,6 +57,9 @@ class Plugins {
       return false;
     }
     const { info } = plugin;
+    if (!info) {
+      return false;
+    }
     const { slug_name, type } = info;
 
     if (!slug_name) {

@@ -17,16 +17,12 @@
  * under the License.
  */
 
-package main
+import { initI18nResource } from '@/utils/pluginKit/utils';
 
-import (
-	answercmd "github.com/apache/incubator-answer/cmd"
-	_ "github.com/apache/incubator-answer-plugins/connector-github"
-)
+import en_US from './en_US.yaml';
+import zh_CN from './zh_CN.yaml';
 
-// @securityDefinitions.apikey ApiKeyAuth
-// @in header
-// @name Authorization
-func main() {
-	answercmd.Main()
-}
+initI18nResource({
+  en_US,
+  zh_CN,
+});

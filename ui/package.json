@@ -16,6 +16,10 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.1.2",
+		"wagmi": "^2.10.2",
+		"viem": "2.x",
+		"@tanstack/react-query": "^5.45.0",
     "@codemirror/lang-markdown": "^6.2.4",
     "@codemirror/language-data": "^6.5.0",
     "@codemirror/state": "^6.4.1",
